@@ -12,6 +12,7 @@ role enum('Admin','Viewer')
 createdDate datetime  default(CURRENT_TIMESTAMP)
 lastLogindate datetime
 
+*imortant except address and lastLogindate all columns are not null
 while creating default for createdDate paste this CURRENT_TIMESTAMP
 
 2)`blog`
@@ -22,11 +23,12 @@ title varchar(255)
 contents varchar(1000) 
 image_video varchar(555) 
 createdDate datetime default(CURRENT_TIMESTAMP)
-updatedDate datetime 
-edit tinyint 
+updatedDate datetime default(CURRENT_TIMESTAMP)
+edit tinyint default(0)
 userId int
 
-while creating default for createdDate paste this CURRENT_TIMESTAMP and userId foreign key reference the user table
+*imortant all columns are not null
+while creating default for createdDate paste this CURRENT_TIMESTAMP and userId foreign key reference the user table 
 
 After creating table if you add image link download the image or vedio then create one floder in Webapp imgfolder paste the image or vedio in this folder.
 1) for example:  http://localhost:8080/BlogApplication_Task2/blogImages/seaNature.jpg
